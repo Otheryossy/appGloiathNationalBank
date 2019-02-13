@@ -1,0 +1,7 @@
+{
+  "name": "app-gloiath-national-bank",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

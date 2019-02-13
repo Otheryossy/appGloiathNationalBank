@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title class="color-title">
+      Transacciones
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="gold" no-padding>
+  <div *ngIf="listTransaction">
+    <ion-item *ngFor="let event of listTransaction">
+      <ion-icon *ngIf="event.currency" name="md-paper" slot="start"></ion-icon>
+      <ion-label *ngIf="event.currency">
+        <b>{{ event.name }} </b>: {{ event.amount }} €
+      </ion-label>
+    </ion-item>
+  </div>
+
+  <app-skeleton-screen *ngIf="!listTransaction"></app-skeleton-screen>
+</ion-content>
+
+<ion-footer class="scale-up-center" *ngIf="sumTransaction">
+  <ion-toolbar class="color-footer">
+    <ion-title text-center>Total: <b>{{ sumTransaction }} € </b></ion-title>
+  </ion-toolbar>
+</ion-footer>

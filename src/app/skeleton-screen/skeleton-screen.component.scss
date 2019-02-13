@@ -1,0 +1,96 @@
+
+.devider{
+    background: transparent !important;
+    padding-left: 9px;
+    border-bottom: 1px solid #d2d2d2;
+    border-top: 1px solid #d2d2d2;
+  }
+  .fakeItem {
+    @keyframes animatedBar {
+      0% {
+        background-position: -406px 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .list,
+     {
+      background-color: lightgrey;
+      opacity: 0.5;
+      height: 0.7em;
+      margin-top: 7px;
+      position: relative;
+      background-image: linear-gradient(90deg, #dddddd 0px, #eeeeee 40px, #dddddd 80px);
+      background-size: 600px;
+      animation: shine-lines 1.1s infinite linear;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: white;
+      }
+    }
+
+    .list:after {
+      width: 70%;
+      background-color: #f8f8f8
+    }
+
+  }
+
+  .fakeItems .avatar {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    background-color: lightgrey;
+    background-image: linear-gradient(90deg, #eee 0px, #fbfbfb 40px, #eee 80px);
+    background-size: 600px;
+    animation: shine-avatar 1.1s infinite linear;
+  }
+  .fakeItems .line {
+    float: left;
+    width: 140px;
+    height: 11px;
+    margin-top: 7px;
+    background-color: lightgrey;
+    background-image: linear-gradient(90deg, #dddddd 0px, #eeeeee 40px, #dddddd 80px);
+    background-size: 600px;
+    animation: shine-lines 1.1s infinite linear;
+    opacity: 0.6;
+  }
+  .fakeItems .avatar + .line {
+    margin-top: 11px;
+    width: 100px;
+  }
+  .fakeItems .line ~ .line {
+    background-color: #ddd;
+  }
+
+  @keyframes shine-lines {
+    0% {
+      background-position: -100px;
+    }
+    40% {
+      background-position: 140px;
+    }
+    100% {
+      background-position: 140px;
+    }
+  }
+  @keyframes shine-avatar {
+    0% {
+      background-position: -32px;
+    }
+    40% {
+      background-position: 208px;
+    }
+    100% {
+      background-position: 208px;
+    }
+}

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title class="color-title">
+      Productos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="gold" no-padding>
+  <div *ngIf="listSku">
+        <ion-item (click)="navigateTransactionSku(event.name)" *ngFor="let event of listSku" detail>
+          <ion-icon name="ios-rocket" slot="start"></ion-icon>
+            <ion-label>
+              {{ event.name }}
+            </ion-label>
+        </ion-item>
+  </div>
+
+  <app-skeleton-screen *ngIf="!listSku"></app-skeleton-screen>
+</ion-content>
